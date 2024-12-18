@@ -314,7 +314,7 @@ async def process_year_to(message: Message, state: FSMContext):
                                                                                    class_='nb-views-int') else None
         description = re.sub(r'\s+', ' ', description) if description else None
 
-        # await bot.send_photo(message.chat.id, photo=f'{image}')
+        await bot.send_photo(message.chat.id, photo=f'{image}')
         await message.answer(photo=f'{image}', text=f"{description}\n{price}\n{region}\n{date}\n{views}")
 
 
